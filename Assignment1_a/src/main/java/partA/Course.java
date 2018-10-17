@@ -22,6 +22,16 @@ public class Course {
     public void setModules(ArrayList<Module> m)
     {
         this.modules = m;
+        
+        //Loop through all students and update their module lists.
+        for(Student stud: this.students)
+        {
+            for(Module mod : this.modules)
+            {
+                mod.addStudent(stud);
+                stud.updateModules();
+            }
+        }
     }
     
     //Set Students as input list.
