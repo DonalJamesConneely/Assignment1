@@ -52,7 +52,5 @@ public class Module {
     public void addCourse(Course c)
     {
         this.courses.add(c);
-        
-        c.addModule(this);
     }
 }
