@@ -23,7 +23,7 @@ public class Tests {
         //Initialise the Array List to variable sizes.//
         cour = new Course("ECE", LocalDate.parse("2018-09-01"), LocalDate.parse("2018-12-20"));
         mod = new Module("Subject", "EE???");
-        var = new Student("Bill", "21", "15379999", LocalDate.parse("1997-07-01"), cour);
+        var = new Student("Bill", "21", "15379999", LocalDate.parse("1997-07-01"));
         
         courses.add(cour);
         modules.add(mod);
