@@ -96,4 +96,17 @@ public class Student {
     {
         this.modules.add(m);
     }
+    
+    public void print()
+    {
+        System.out.println("" + Name + ",\tUsername: " + UserName);
+        System.out.println("//////////////Student Modules//////////////");
+        for(Module mod: this.modules)
+        {
+            System.out.println("" + mod.getName());
+        }
+        
+        System.out.println("//////////////Student's Course//////////////");
+        System.out.println("" + course.getName());
+    }
 }

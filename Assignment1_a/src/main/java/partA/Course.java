@@ -89,6 +89,7 @@ public class Course {
     
     public void print()
     {
+        System.out.println("//////////////Course Details//////////////");
         System.out.println("" + name + ", Start: " + startdate + ", End: " + enddate);
         System.out.println("//////////////Modules on Course//////////////");
         for(Module mod: this.modules)
