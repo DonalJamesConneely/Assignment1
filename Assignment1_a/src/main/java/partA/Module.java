@@ -9,6 +9,7 @@ public class Module {
     private ArrayList<Student> students = new ArrayList<Student>();
     private ArrayList<Course> courses = new ArrayList<Course>();
     
+    //Constructor.
     public Module (String n, String id)
     {
         this.name = n;
@@ -43,6 +44,8 @@ public class Module {
     public void addStudent(Student s)
     {
         this.students.add(s);
+      
+        s.addModule(this);
     }
     
     //Add a Course to the Module list.

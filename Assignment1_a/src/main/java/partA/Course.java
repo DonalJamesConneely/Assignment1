@@ -11,6 +11,7 @@ public class Course {
     private LocalDate startdate;
     private LocalDate enddate;
     
+    //Constructor.
     public Course (String n, LocalDate start, LocalDate end)
     {
         this.name = n;
@@ -22,16 +23,6 @@ public class Course {
     public void setModules(ArrayList<Module> m)
     {
         this.modules = m;
-        
-        //Loop through all students and update their module lists.
-        for(Student stud: this.students)
-        {
-            for(Module mod : this.modules)
-            {
-                mod.addStudent(stud);
-                stud.updateModules();
-            }
-        }
     }
     
     //Set Students as input list.
@@ -56,24 +47,11 @@ public class Course {
     public void addStudent(Student s)
     {
         this.students.add(s);
-        
-        //Loop through all modules and add student to modules.
-        for(Module mod: this.modules)
-        {
-            mod.addStudent(s);
-        }
     }
     
     //Add Module to Course.
     public void addModule(Module m)
     {
         this.modules.add(m);
-        
-        //Loop through all students and update their module lists.
-        for(Student stud: this.students)
-        {
-            m.addStudent(stud);
-            stud.updateModules();
-        }
     }
 }
