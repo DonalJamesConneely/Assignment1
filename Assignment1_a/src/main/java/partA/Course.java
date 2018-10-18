@@ -59,6 +59,11 @@ public class Course {
     public void setStudents(ArrayList<Student> s)
     {
         this.students = s;
+        
+        for(Student stud: this.students)
+        {
+            stud.setCourse(this);
+        }
     }
     
     //Return Module List
@@ -77,6 +82,8 @@ public class Course {
     public void addStudent(Student s)
     {
         this.students.add(s);
+        
+        s.setCourse(this);
     }
     
     //Add Module to Course.
