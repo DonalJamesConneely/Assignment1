@@ -34,7 +34,7 @@ public class Tests {
     public void getUsernameTest()
     {
             String expected = "Bill_21";
-            String real = students.get(0).getUsername();
+            String real = students.get(0).getUserName();
             
             assertEquals(expected, real);
     }
