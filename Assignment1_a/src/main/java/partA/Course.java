@@ -18,6 +18,36 @@ public class Course {
         this.startdate = start;
         this.enddate = end;
     }
+
+    //Get Name.
+    public String getName() {
+        return name;
+    }
+
+    //Set Nanme.
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //Get Start Date.
+    public LocalDate getStartdate() {
+        return startdate;
+    }
+
+    //Set Start Date.
+    public void setStartdate(LocalDate startdate) {
+        this.startdate = startdate;
+    }
+
+    //Get End Date.
+    public LocalDate getEnddate() {
+        return enddate;
+    }
+
+    //Set End Date.
+    public void setEnddate(LocalDate enddate) {
+        this.enddate = enddate;
+    }
     
     //Set Modules as input list.
     public void setModules(ArrayList<Module> m)
@@ -55,5 +85,21 @@ public class Course {
         this.modules.add(m);
         
         m.addCourse(this);
+    }
+    
+    public void print()
+    {
+        System.out.println("" + name + ", Start: " + startdate + ", End: " + enddate);
+        System.out.println("//////////////Modules on Course//////////////");
+        for(Module mod: this.modules)
+        {
+            System.out.println("" + mod.getName());
+        }
+        
+        System.out.println("//////////////Students on Course//////////////");
+        for(Student stud: this.students)
+        {
+            System.out.println("" + stud.getName() + ",\tUsername: " + stud.getUserName());
+        }
     }
 }

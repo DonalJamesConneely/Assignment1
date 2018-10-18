@@ -15,6 +15,26 @@ public class Module {
         this.name = n;
         this.ID = id;
     }
+
+    //Get Name.
+    public String getName() {
+        return name;
+    }
+
+    //Set Name.
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    //Get ID.
+    public String getID() {
+        return ID;
+    }
+
+    //Set ID.
+    public void setID(String ID) {
+        this.ID = ID;
+    }
     
     //Set Courses as input list.
     public void setCourses(ArrayList<Course> c)
