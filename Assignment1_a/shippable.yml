@@ -1,9 +1,0 @@
-## YAML Template.
----
-langauge: java
-
-jdk: openjdk8
-
-build:
-  ci:
-   - mvn install -DskipTests=true
